@@ -1,15 +1,22 @@
 {
-  "name": "yulik-gram-ultra",
-  "version": "2.0.0",
-  "description": "Yulik Gram — премиум мессенджер",
+  "name": "yulik-gram-pro",
+  "version": "3.0.0",
+  "description": "Yulik Gram — мессенджер с аудиозвонками",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "android": "npx cap copy && npx cap open android"
   },
   "dependencies": {
     "express": "^4.18.2",
     "ws": "^8.14.2",
     "bcryptjs": "^2.4.3",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "simple-peer": "^9.11.1"
+  },
+  "devDependencies": {
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/cli": "^5.0.0",
+    "@capacitor/android": "^5.0.0"
   }
 }

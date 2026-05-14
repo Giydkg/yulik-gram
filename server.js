@@ -25,8 +25,7 @@ function loadData() {
         } else {
             users = {
                 'yulik': { username: 'yulik', phone: '+79778543533', passwordHash: bcrypt.hashSync('123456', 10), name: 'Юлик', avatar: '👑', online: true, lastSeen: new Date() },
-                'max': { username: 'max', phone: '+79778477550', passwordHash: bcrypt.hashSync('123456', 10), name: 'Макс', avatar: '🔥', online: false, lastSeen: new Date() },
-                'anna': { username: 'anna', phone: '+79991234567', passwordHash: bcrypt.hashSync('123456', 10), name: 'Анна', avatar: '🌸', online: true, lastSeen: new Date() }
+                'max': { username: 'max', phone: '+79778477550', passwordHash: bcrypt.hashSync('123456', 10), name: 'Макс', avatar: '🔥', online: false, lastSeen: new Date() }
             };
             saveData();
         }
@@ -107,10 +106,14 @@ wss.on('connection', (ws) => {
                 const targetWs = clients.get(msg.toUsername);
                 if (targetWs && targetWs.readyState === WebSocket.OPEN) targetWs.send(JSON.stringify({ type: 'new_message', chatId: msg.chatId, message: messageObj }));
             }
+            if (msg.type === 'call-offer' || msg.type === 'call-answer' || msg.type === 'call-ice') {
+                const targetWs = clients.get(msg.to);
+                if (targetWs && targetWs.readyState === WebSocket.OPEN) targetWs.send(JSON.stringify(msg));
+            }
         } catch(e) { console.error(e); }
     });
     ws.on('close', () => { if (currentUser) { clients.delete(currentUser); if (users[currentUser]) { users[currentUser].online = false; saveData(); } } });
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => console.log(`💎 Yulik Gram ULTRA запущен на http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`💎 Yulik Gram PRO запущен на http://localhost:${PORT}`));

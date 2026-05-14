@@ -93,7 +93,7 @@ async function setupSearch() {
         const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&currentUser=${currentUser.username}`);
         const users = await res.json();
         if (!users.length) { resultsDiv.innerHTML = '<div class="search-result-item">❌ Никого не найдено</div>'; return; }
-        resultsDiv.innerHTML = users.map(u => `<div class="search-result-item" onclick="startChatWith('${u.username}')"><span style="font-size:36px">${u.avatar || '👤'}</span><div style="flex:1"><div><strong>${escapeHtml(u.name)}</strong></div><div style="font-size:11px;color:#a1a1aa">@${u.username}</div></div><button style="background:#a855f7;border:none;padding:6px 12px;border-radius:20px;color:white">💬</button></div>`).join('');
+        resultsDiv.innerHTML = users.map(u => `<div class="search-result-item" onclick="startChatWith('${u.username}')"><span style="font-size:36px">${u.avatar || '👤'}</span><div style="flex:1"><div><strong>${escapeHtml(u.name)}</strong></div><div style="font-size:11px;color:#c084fc">@${u.username}</div></div><button style="background:#a855f7;border:none;padding:6px 12px;border-radius:20px;color:white">💬</button></div>`).join('');
     };
 }
 
