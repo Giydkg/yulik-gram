@@ -1,0 +1,15 @@
+{
+  "name": "yulik-gram-ultra",
+  "version": "2.0.0",
+  "description": "Yulik Gram — премиум мессенджер",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.1"
+  }
+}

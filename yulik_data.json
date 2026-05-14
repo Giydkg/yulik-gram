@@ -1,0 +1,42 @@
+{
+  "users": {
+    "yulik": {
+      "username": "yulik",
+      "phone": "+79778543533",
+      "passwordHash": "$2a$10$rR3gM9QyUkTP6KAV.kNCduHg4S9TYFOJvji34CN8CwNfEArPxc6O2",
+      "name": "Юлик",
+      "avatar": "👑",
+      "online": true,
+      "lastSeen": "2026-05-14T14:25:48.119Z"
+    },
+    "max": {
+      "username": "max",
+      "phone": "+79778477550",
+      "passwordHash": "$2a$10$IP33qGq9EANTjVlI3hSp/.yWPp731qvG/PvWGi4Vu9oif.v4uHXZG",
+      "name": "Макс",
+      "avatar": "🔥",
+      "online": false,
+      "lastSeen": "2026-05-14T14:25:48.202Z"
+    },
+    "anna": {
+      "username": "anna",
+      "phone": "+79991234567",
+      "passwordHash": "$2a$10$YMZDIqJgczg/16LPCC72Ie5EwOJxoJPNl9tzPMwqhy3P.z6r2Rjrm",
+      "name": "Анна",
+      "avatar": "🌸",
+      "online": true,
+      "lastSeen": "2026-05-14T14:25:48.280Z"
+    },
+    "sd": {
+      "username": "sd",
+      "phone": "sd",
+      "passwordHash": "$2a$10$tSXS3Vq5JEQqMFb2kN2geu6/0EQai681RD9EA.nEKjCGkj1jQBZhC",
+      "name": "sd",
+      "avatar": "😎",
+      "online": true,
+      "lastSeen": "2026-05-14T14:25:58.070Z"
+    }
+  },
+  "chats": {},
+  "messages": {}
+}

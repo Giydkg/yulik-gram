@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Yulik Gram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app" id="app">
+        <div id="authScreen" class="screen active">
+            <div class="auth-container">
+                <div class="logo-wrapper">
+                    <div class="logo-icon">💎</div>
+                    <div class="logo">YULIK GRAM</div>
+                    <div class="logo-sub">премиум мессенджер</div>
+                </div>
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Вход</button>
+                    <button class="tab-btn" data-tab="register">Регистрация</button>
+                </div>
+                <div id="loginTab" class="auth-form active">
+                    <div class="input-group"><span class="input-icon">👤</span><input type="text" id="loginLogin" placeholder="Юзернейм или номер"></div>
+                    <div class="input-group"><span class="input-icon">🔒</span><input type="password" id="loginPassword" placeholder="Пароль"></div>
+                    <button id="doLoginBtn" class="btn-primary">Войти →</button>
+                </div>
+                <div id="registerTab" class="auth-form">
+                    <div class="input-group"><span class="input-icon">🏷️</span><input type="text" id="regUsername" placeholder="Юзернейм"></div>
+                    <div class="input-group"><span class="input-icon">📞</span><input type="text" id="regPhone" placeholder="Номер телефона"></div>
+                    <div class="input-group"><span class="input-icon">👤</span><input type="text" id="regName" placeholder="Ваше имя"></div>
+                    <div class="input-group"><span class="input-icon">🔒</span><input type="password" id="regPassword" placeholder="Пароль"></div>
+                    <button id="doRegisterBtn" class="btn-primary">Создать аккаунт →</button>
+                </div>
+                <div id="authError" class="error-message"></div>
+            </div>
+        </div>
+        
+        <div id="mainScreen" class="screen">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="user-badge">
+                        <div class="user-avatar" id="userAvatar">😎</div>
+                        <div><div class="user-name" id="userName"></div><div class="user-status">онлайн</div></div>
+                    </div>
+                    <button id="logoutBtn" class="icon-btn">🚪</button>
+                </div>
+                <div class="search-section">
+                    <div class="search-box"><span>🔍</span><input type="text" id="searchInput" placeholder="Поиск по имени или номеру..."></div>
+                    <div id="searchResults" class="search-results" style="display:none"></div>
+                </div>
+                <div class="chats-header">💬 Чаты</div>
+                <div id="chatsList" class="chats-list"><div class="empty-state">✨ Найди друга через поиск</div></div>
+            </div>
+            <div class="chat-area" id="chatArea" style="display:none">
+                <div class="chat-header"><div class="chat-user"><div class="chat-avatar" id="chatAvatar">💬</div><div><div class="chat-name" id="chatName"></div><div class="chat-status" id="chatStatus"></div></div></div></div>
+                <div id="messagesContainer" class="messages-container"><div class="empty-chat"><div class="empty-icon">💎</div><div>Yulik Gram</div></div></div>
+                <div class="message-input-area"><div class="input-wrapper"><input type="text" id="messageInput" placeholder="Сообщение..." class="message-input"><button id="sendBtn" class="send-btn">📨</button></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
